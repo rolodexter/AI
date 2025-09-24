@@ -3,18 +3,19 @@
 > Who this is for · What you'll find · How to start in 5 minutes
 
 ## Start Here
-<!-- auto: atoms where starter: true, hub == research -->
+<!-- START:START-HERE -->
+_(none yet)_
+<!-- END:START-HERE -->
 
 ## Today's Picks
-<!-- auto: newest atoms for this hub -->
+<!-- START:TODAY -->
+_(none yet)_
+<!-- END:TODAY -->
 
 ## Lanes
-### Lane A
-- (auto)
-### Lane B
-- (auto)
-### Lane C
-- (auto)
+<!-- START:LANES -->
+_(no lanes yet)_
+<!-- END:LANES -->
 
 ## Deep Dives
 - Links to relevant textbooks, guides, and long-form materials.

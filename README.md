@@ -10,3 +10,18 @@ A living magazine-style AI portal updated intraday with a hub-and-spoke architec
 ## Workflow
 
 drop → build → publish
+
+## Dev Setup
+```bash
+pip install -r requirements.txt
+python tools/scripts/lint-frontmatter.py
+python tools/scripts/build-portal.py
+```
+
+Optional Git hook (Windows/PowerShell):
+
+```powershell
+tools\scripts\hooks\install-hooks.ps1
+```
+
+CI runs linter + portal generator on every PR/push.

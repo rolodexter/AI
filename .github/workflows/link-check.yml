@@ -1,1 +1,17 @@
-# TODO: implemented in next task
+name: link-check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      # Placeholder for actual link checking in the future
+      - name: Check links placeholder
+        run: echo "Link checking will be implemented in a future task"

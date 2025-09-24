@@ -1,0 +1,130 @@
+[
+  {
+    "title": "AI Data Agents: Theory, Architecture, and Implementation",
+    "kind": "textbook",
+    "hub": "learn",
+    "lanes": [
+      "foundations",
+      "methods"
+    ],
+    "audience": "technical",
+    "tags": [
+      "agents",
+      "architectures"
+    ],
+    "added": "2025-09-24",
+    "added_dt": "2025-09-24T00:00:00",
+    "starter": true,
+    "summary": [
+      "Map page for the textbook. Abstract, scope, and navigation to the full repo."
+    ],
+    "path": "textbooks/ai-data-agents/index.md"
+  },
+  {
+    "title": "Rendering Knowledge: Information Design for the AI Era",
+    "kind": "textbook",
+    "hub": "build",
+    "lanes": [
+      "foundations",
+      "design"
+    ],
+    "audience": "technical",
+    "tags": [
+      "design",
+      "knowledge-management"
+    ],
+    "added": "2025-09-24",
+    "added_dt": "2025-09-24T00:00:00",
+    "starter": true,
+    "summary": [
+      "Map page for the textbook. Abstract, scope, and navigation to the full repo."
+    ],
+    "path": "textbooks/rendering-knowledge/index.md"
+  },
+  {
+    "title": "AI Economics Series",
+    "kind": "monograph",
+    "hub": "apply",
+    "lanes": [
+      "economics",
+      "finance"
+    ],
+    "audience": "executive",
+    "tags": [
+      "economics"
+    ],
+    "added": "2025-09-24",
+    "added_dt": "2025-09-24T00:00:00",
+    "starter": true,
+    "summary": [
+      "Series overview page for short, rigorous works on AI economics."
+    ],
+    "path": "monographs/ai-economics-series/index.md"
+  },
+  {
+    "title": "Law and Policy Series",
+    "kind": "monograph",
+    "hub": "govern",
+    "lanes": [
+      "legal",
+      "policy",
+      "safety"
+    ],
+    "audience": "legal",
+    "tags": [
+      "governance",
+      "regulation"
+    ],
+    "added": "2025-09-24",
+    "added_dt": "2025-09-24T00:00:00",
+    "starter": true,
+    "summary": [
+      "Series overview page for monographs on AI law, policy, and governance."
+    ],
+    "path": "monographs/law-and-policy-series/index.md"
+  },
+  {
+    "title": "Responsible AI Governance",
+    "kind": "monograph",
+    "hub": "govern",
+    "lanes": [
+      "legal",
+      "policy",
+      "safety"
+    ],
+    "audience": "legal",
+    "tags": [
+      "governance",
+      "regulation",
+      "ethics"
+    ],
+    "added": "2025-09-24",
+    "added_dt": "2025-09-24T00:00:00",
+    "starter": false,
+    "summary": [
+      "Map page for a monograph on frameworks and best practices for responsible AI governance across organizations and jurisdictions."
+    ],
+    "path": "monographs/law-and-policy-series/responsible-ai-governance/index.md"
+  },
+  {
+    "title": "Value Capture in the AI Stack",
+    "kind": "monograph",
+    "hub": "apply",
+    "lanes": [
+      "economics",
+      "finance"
+    ],
+    "audience": "executive",
+    "tags": [
+      "economics",
+      "markets"
+    ],
+    "added": "2025-09-24",
+    "added_dt": "2025-09-24T00:00:00",
+    "starter": false,
+    "summary": [
+      "Map page for a short, peer-reviewed nonfiction work on where value accrues across infra\u2192models\u2192agents\u2192distribution."
+    ],
+    "path": "monographs/ai-economics-series/value-capture-in-the-ai-stack/index.md"
+  }
+]

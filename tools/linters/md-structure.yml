@@ -1,0 +1,5 @@
+---
+# Placeholder for markdown structure linter configuration
+rules:
+  frontmatter-required: true
+  links-valid: true

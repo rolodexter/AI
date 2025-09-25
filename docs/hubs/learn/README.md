@@ -23,3 +23,10 @@ _(none yet)_
 
 ## Deep Dives
 - Links to relevant textbooks, guides, and long-form materials.
+
+## How to Cite & Reuse
+This content is licensed under [CC-BY 4.0](../../../LICENSE.docs). When using or adapting materials, please cite:
+
+`Joe Maristela et al. *rolodexter/ai Portal*. GitHub repository, 2025. https://github.com/rolodexter/ai`
+
+This repo follows a **map-only** principle: it hosts indexes, abstracts, and navigation, while full manuscripts live in their own repositories.

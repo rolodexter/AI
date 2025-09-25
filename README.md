@@ -11,6 +11,14 @@ A living magazine-style AI portal updated intraday with a hub-and-spoke architec
 
 drop → build → publish
 
+## Licensing & Citation (TL;DR)
+
+- Code & scripts: **MIT** → see `LICENSE.code`
+- Docs & knowledge: **CC-BY 4.0** (attribution required) → see `LICENSE.docs`
+- Cite this portal:  
+  `Joe Maristela et al. *rolodexter/ai Portal*. GitHub repository, 2025. https://github.com/rolodexter/ai`
+- **Map-only**: This repo hosts indexes, abstracts, TOC-lite. Full manuscripts live in their own repos.
+
 ## Dev Setup
 ```bash
 pip install -r requirements.txt

@@ -1,0 +1,29 @@
+name: repo-inventory
+on:
+  pull_request:
+  schedule:
+    - cron: "0 6 * * 1"  # Mondays 06:00 UTC
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Generate inventory
+        run: |
+          python tools/scripts/gen-repo-inventory.py > inventory.txt
+      - name: Compare with snapshot
+        run: |
+          echo "=== DIFF vs docs/_generated/REPO_INVENTORY_2025-09-24.md ==="
+          # Extract code block content from snapshot and diff it against current
+          awk '/^```text/{flag=1;next}/^```/{flag=0}flag' docs/_generated/REPO_INVENTORY_2025-09-24.md > snapshot.txt
+          diff -u snapshot.txt inventory.txt || true
+      - name: Upload diff artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo-inventory-diff
+          path: |
+            inventory.txt
+            snapshot.txt

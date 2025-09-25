@@ -2,16 +2,27 @@
 import sys, os, re, yaml
 
 REQUIRED_FOR_BOOKS = [
-    "title","kind","status","audience","hub","canonical_repo","summary"
+    "title","kind","status","audience","hub","canonical_repo","summary","citation"
 ]
+
+# Citation must contain these strings
+CITATION_REQUIRED_TEXTS = ["rolodexter/ai Portal", "github.com/rolodexter/ai"]
 VALID_KINDS = {"textbook","monograph"}
 BOOK_ROOTS = ("docs/textbooks", "docs/monographs")
 TARGET_FILENAMES = ("index.md",)
+ATOMS_ROOT = "docs/atoms"
 
 def is_book_page(path):
-    if not path.replace("\\","/").endswith(TARGET_FILENAMES):
+    norm_path = path.replace("\\","/")
+    if not os.path.basename(norm_path) in TARGET_FILENAMES:
         return False
-    return path.replace("\\","/").startswith(BOOK_ROOTS)
+    for root in BOOK_ROOTS:
+        if norm_path.startswith(root):
+            return True
+    return False
+    
+def is_atom_page(path):
+    return path.replace("\\","/").startswith(ATOMS_ROOT) and not path.endswith("_BOOK.md") and not path.endswith("_PAPER.md")
 
 def extract_frontmatter(md):
     m = re.match(r"^---\n(.*?)\n---\n", md, flags=re.S)
@@ -34,7 +45,8 @@ def main():
     repo = root
     failures = 0
     for path in walk_md_files(repo):
-        if not is_book_page(path):
+        # Skip files that aren't books or atoms
+        if not (is_book_page(path) or is_atom_page(path)):
             continue
         with open(path, "r", encoding="utf-8") as fh:
             txt = fh.read()
@@ -50,6 +62,13 @@ def main():
         if fm.get("kind") not in VALID_KINDS:
             print(f"[lint] {path} invalid kind: {fm.get('kind')}")
             failures += 1
+            
+        # Check citation field contains required text
+        citation = fm.get("citation", "")
+        for required_text in CITATION_REQUIRED_TEXTS:
+            if required_text not in citation:
+                print(f"[lint] {path} citation does not contain '{required_text}'")
+                failures += 1
         # discourage long bodies (map-only)
         body = re.sub(r"^---\n.*?\n---\n", "", txt, flags=re.S).strip()
         if len(body.split()) > 1000:
